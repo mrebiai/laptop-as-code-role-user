@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  connection: local
+  roles:
+    - laptop-as-code-role-user

@@ -1,0 +1,29 @@
+= laptop-as-code-role-user
+
+User installation
+
+== Requirements
+None
+
+== Default Role Variables
+None
+
+== Dependencies
+None
+
+== Example Playbook
+ifeval::[{safe-mode-level} < 20]
+[source, yaml]
+----
+include::tests/test.yml[]
+----
+endif::[]
+ifeval::[{safe-mode-level} >= 20]
+link:tests/test.yml[]
+endif::[]
+
+== License
+Apache-2.0
+
+== Author Information
+https://github.com/mrebiai
