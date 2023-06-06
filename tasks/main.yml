@@ -1,1 +1,5 @@
 ---
+# desktop
+- import_tasks: desktop/launch-bar.yml
+- import_tasks: desktop/logo.yml
+- import_tasks: desktop/wallpaper.yml

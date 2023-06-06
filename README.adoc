@@ -9,7 +9,15 @@ None
 None
 
 == Dependencies
-None
+ifeval::[{safe-mode-level} < 20]
+[source, yaml]
+----
+include::meta/main.yml[]
+----
+endif::[]
+ifeval::[{safe-mode-level} >= 20]
+link:meta/main.yml[]
+endif::[]
 
 == Example Playbook
 ifeval::[{safe-mode-level} < 20]

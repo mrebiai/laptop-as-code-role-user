@@ -1,0 +1,13 @@
+---
+- name: Desktop - Get user
+  tags: logo
+  shell: "echo -n {{ ansible_env.USER }}"
+  register: my_linux_login
+
+- name: Desktop - Copy logo file
+  tags: logo
+  become: true
+  copy:
+    src: files/desktop/logo.png
+    dest: /var/lib/AccountsService/icons/{{ my_linux_login.stdout }}
+    mode: a=rw
