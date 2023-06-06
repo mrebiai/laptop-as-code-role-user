@@ -1,0 +1,8 @@
+---
+sdkman:
+  - name: "java"
+    version: "17.0.7-tem"
+  - name: "kotlin"
+    version: "1.7.21"
+  - name: "maven"
+    version: "3.9.2"

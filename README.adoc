@@ -5,11 +5,27 @@ User installation
 == Requirements
 None
 
-== Default Role Variables
-None
+== Role Variables
+ifeval::[{safe-mode-level} < 20]
+[source, yaml]
+----
+include::vars/main.yml[]
+----
+endif::[]
+ifeval::[{safe-mode-level} >= 20]
+link:vars/main.yml[]
+endif::[]
 
 == Dependencies
-None
+ifeval::[{safe-mode-level} < 20]
+[source, yaml]
+----
+include::meta/main.yml[]
+----
+endif::[]
+ifeval::[{safe-mode-level} >= 20]
+link:meta/main.yml[]
+endif::[]
 
 == Example Playbook
 ifeval::[{safe-mode-level} < 20]
