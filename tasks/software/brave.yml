@@ -1,0 +1,29 @@
+---
+- name: Brave - GPG key
+  tags: brave
+  become: true
+  apt_key:
+    url: https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    keyring: /usr/share/keyrings/brave-browser-archive-keyring.gpg
+    state: present
+
+- name: Brave - Get architecture
+  tags: brave
+  shell: dpkg --print-architecture
+  register: architecture
+
+- name: Brave - Repository
+  tags: brave
+  become: true
+  apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch={{ architecture.stdout }}] https://brave-browser-apt-release.s3.brave.com/ stable main
+    filename: brave-browser-release
+    state: present
+
+- name: Brave - Installation
+  tags: brave
+  become: true
+  apt:
+    name: brave-browser
+    state: present
+    update_cache: yes

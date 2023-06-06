@@ -24,3 +24,15 @@ galaxy_info:
 
   galaxy_tags:
     - linux 
+
+dependencies:
+# tag::dependencies[]
+  - role: laptop-as-code-role-dev-back
+    src: git@github.com:mrebiai/laptop-as-code-role-dev-back.git
+    scm: git
+    version: main
+  - role: laptop-as-code-role-dev-front
+    src: git@github.com:mrebiai/laptop-as-code-role-dev-front.git
+    scm: git
+    version: main
+# end::dependencies[]

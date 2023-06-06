@@ -1,0 +1,7 @@
+---
+- name: Desktop - Launch Bar
+  tags: launch-bar
+  dconf:
+    key: "/org/gnome/shell/favorite-apps"
+    # call cmd :  gsettings get org.gnome.shell favorite-apps
+    value: "['brave-browser.desktop', 'intellij-idea-ultimate_intellij-idea-ultimate.desktop', 'code_code.desktop', 'org.gnome.Nautilus.desktop', 'terminator.desktop']"

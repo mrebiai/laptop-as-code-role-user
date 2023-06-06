@@ -1,0 +1,12 @@
+---
+sdkman:
+  - name: "java"
+    version: "17.0.7-tem"
+  - name: "kotlin"
+    version: "1.8.20"
+  - name: "scala"
+    version: "3.3.0"
+  - name: "sbt"
+    version: "1.9.0"
+  - name: "gradle"
+    version: "8.1.1"
